@@ -1,1 +1,1 @@
-python manage.py shell -c "import run_workers"
+python3 manage.py shell -c "import run_workers"
