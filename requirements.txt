@@ -1,0 +1,6 @@
+Django==1.11.4
+whitenoise==3.3.0
+dj-database-url==0.4.2
+requests==2.18.3
+praw==5.0.1
+gunicorn==19.7.1
