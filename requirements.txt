@@ -5,3 +5,4 @@ requests==2.18.3
 praw==5.0.1
 gunicorn==19.7.1
 psycopg2==2.7.3
+brotlipy==0.7.0
