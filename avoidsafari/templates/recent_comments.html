@@ -1,21 +1,18 @@
-{% load static %}
-<!Doctype HTML>
-<head>
-    <title>AVoid Safari</title>
-    <style>
-        table {
-            table-layout: fixed;
-            width: 100%;
-            text-align: center;
-            font-family: sans-serif;
-        }
-        iframe {
-            display: inline-block !important;
-        }
-    </style>
-    <link rel=stylesheet href='{% static "global.css" %}' />
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block style %}
+    table {
+        table-layout: fixed;
+        width: 100%;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    iframe {
+        display: inline-block !important;
+    }
+{% endblock %}
+
+{% block body %}
     <div id='info'>
         <h1>AVoid Safari</h1>
         <h3>What is it?</h3>
@@ -65,4 +62,4 @@
         </tbody>
     </table>
     <script async src="https://www.redditstatic.com/comment-embed.js"></script>
-</body>
+{% endblock %}
