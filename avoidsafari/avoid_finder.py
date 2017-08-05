@@ -69,7 +69,7 @@ def remove_links(comment_body):
 
 def remove_usernames(comment_body):
     return re.sub(
-        r'/u/[a-zA-Z0-9]+',
+        r'/?u/[a-zA-Z0-9]+',
         '/u/',
         comment_body
     )
