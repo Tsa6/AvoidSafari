@@ -15,7 +15,7 @@ def main():
             ).save()
             print('%s/%s: %s\n' % (comment.submission, comment, comment.body))
         except IntegrityError:
-            print('[Redundant] %s/%s\n' % (comment.submission, comment, comment.body))
+            print('[Redundant] %s/%s: %s\n' % (comment.submission, comment, comment.body))
 
 if __name__ == '__main__':
     main()
