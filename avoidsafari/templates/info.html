@@ -1,0 +1,87 @@
+{% load static %}
+<!Doctype HTML>
+<html>
+    <head>
+        <title>AVoid Safari - Info</title>
+        <link rel='stylesheet' href='{% static "global.css" %}'/>
+        <style>
+            dd {
+              margin-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Additional Info</h1>
+        <p style='text-align: center'>
+            <a href='/'>Back to main page</a>
+        </p>
+        <h3>Constraints</h3>
+        <dl>
+            <dt>15+ words minimum, not counting using a word again</dt>
+            <dd>
+                This constraint limits low-quality, or short posts, which lack actual
+                hard work, or posts not built for /r/AVoid5, such as, "Good bot",
+                "cat cat cat cat cat...", and similar posts.  This app was built to
+                highlight AVoid's work, and although such posts would comply, without
+                this constraint, workless posts would drown out actual posts.  This
+                constraint looks at a dictionary, as imaginary words do not count
+                towards this, such as, "aadf  slkja;df kj  a;s f", or words using symbols
+                to blip out a fifthglyph, such as "I lik- to circumv-nt r-strictions
+                using dash-s".
+            </dd>
+            <dt>75+ glyphs</dt>
+            <dd>
+                This is a shortcut our bot is taking, and not so much an actual
+                constraint.  Almost all posts with 15+ words will hit this mark.  If
+                you want to miss it, your typical word count must fall south of 5
+                glyphs to a word, including black glyphs and punctuation.  It  was hard
+                to built actual words that hits our 15 word minimum but not our 75 glyph
+                minimum.  Basically, if you actually do fail only this constraint with
+                actual gramatically valid words, I will manually add you to our hall of
+                honor.
+            </dd>
+            <dt>Not NSFW</dt>
+            <dd>
+                This constraint is for hiding posts that AVoids might not want to look
+                at, and making AVoidSafari family okay.  (Also, NSFW discussion won't
+                display right, so our app couldn't, if it wants to or not.) If an
+                annotation is SFW, if its origin post is NSFW, it too will count as
+                NSFW.
+            </dd>
+            <dt>No Filthy Fifthglyphs</dt>
+            <dd>
+                This is our original and main constraint.  For additional info and
+                discussion about writing and talking using this constraint, visit
+                <a href='https://reddit.com/r/AVoid5'>/r/AVoid5</a>, or look up
+                lipograms.  This constrain has will not apply to login IDS, so long
+                as said IDs start with "/u/", nor links, so long as your Markdown syntax
+                will not show any fifthglyphs.
+            </dd>
+            <dt>Not on /r/AVoid5</dt>
+            <dd>
+                This app was built to highlight posts that fly off /r/AVoid5's radar. If
+                a post is on /r/AVoid5 to start with, it has lots of publicity as it
+                stands.  Allowing such posts would flood off-sub posts and finally just
+                turn this app into an additional /r/AVoid5.  Although right now this
+                constraint only omits posts or /r/AVoid5, if additional lipogramatic subs
+                involving not typing fifthglyphs pop up, it will apply to said subs too.
+            </dd>
+            <dt>On a public sub</dt>
+            <dd>
+                As most can't look at discussion on non-public subs, our bot can't and won't
+                find or display it.  Our app only displays posts on a public sub that was public
+                as it said post was built.
+            </dd>
+            <dt>No link or word posts</dt>
+            <dd>
+                For right now, our app will not scan anything but discussion.  I am planning to
+                add this functionality soon, and will omit this constraint at that point.
+            </dd>
+        </dl>
+        <h3>Public Algorithms</h3>
+        <p>
+            Anybody can look at and play with our app's programming by going to its
+            <a href="https://github.com/Tsa6/AvoidSafari">GitHub</a> link.
+        </p>
+    </body>
+</html>

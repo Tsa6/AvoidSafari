@@ -1,0 +1,10 @@
+body {
+  margin: 0 20%;
+}
+h1 {
+  text-align: center;
+}
+a[href] {
+  color: #68f;
+  text-decoration: none;
+}

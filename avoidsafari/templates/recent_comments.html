@@ -1,3 +1,4 @@
+{% load static %}
 <!Doctype HTML>
 <head>
     <title>AVoid Safari</title>
@@ -12,16 +13,45 @@
             display: inline-block !important;
         }
     </style>
+    <link rel=stylesheet href='{% static "global.css" %}' />
 </head>
 <body>
+    <div id='info'>
+        <h1>AVoid Safari</h1>
+        <h3>What is it?</h3>
+        <p>
+            AVoid Safari is an app built by <a href="https://www.reddit.com/user/Tsa6/">/u/Tsa6</a>
+            for <a href="https://www.reddit.com/r/AVoid5/">/r/AVoid5</a>.  It highlights posts from
+            all across Snoo's domain that follow a bunch of lipogramatic constraints.  Normally,
+            AVoids wouldn't find or point out such posts just browsing.  This app was built to
+            hightlight lipogramatic posts and award AVoids for hard work and vigilant posting.
+        </p>
+        <p>
+            <a href='info'>Additional Info</a>
+        </p>
+        <h3>How can my post show up?</h3>
+        <p>
+            To sift through lots of low quality, low work, posts, a post must hit a small amount of
+            constraints:
+        </p>
+        <ul>
+            <li>Your post must consist of 15+ words, not counting using a word again</li>
+            <li>75+ glyphs, including blank glyphs, punctuation, and misc symbols</li>
+            <li>If your post is NSFW, or is in a NSFW discussion, it wil not count</li>
+            <li>Your post can't contain any fifthglyphs, not counting login IDs or links</li>
+            <li>Posts on /r/AVoid5 do not count, as all posts on /r/AVoid5 follow lipogramatic constraints.</li>
+            <li>Our bot can't find posts in non-public subs, so skips such posts</li>
+            <li>As of right now, word posts and links do not count, but this may soon.</li>
+        </ul>
+    </div>
     <table>
         <thead>
             <tr>
                 <th>
-                    <h2>Most Recent</h2>
+                    <h2>Young Posts</h2>
                 </th>
                 <th>
-                    <h2>Longest Today</h2>
+                    <h2>Today's Long Posts</h2>
                 </th>
             </tr>
         </thead>
