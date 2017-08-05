@@ -10,6 +10,22 @@
     iframe {
         display: inline-block !important;
     }
+    noscript > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    noscript > div:first-child {
+        background-color: #f55;
+        font-weight: bold;
+        font-size: 2em;
+        padding: 0 20px;
+        width: auto;
+    }
+    noscript > div:last-child {
+        background-color: #faa;
+        padding: 10px;
+        width: 100%;
+    }
 {% endblock %}
 
 {% block body %}
@@ -41,6 +57,14 @@
             <li>As of right now, word posts and links do not count, but this may soon.</li>
         </ul>
     </div>
+    <noscript>
+        <div>
+            !
+        </div>
+        <div>
+            To display discussion without clicking links, allow scripts from redditstatic.com
+        </div>
+    </noscript>
     <table>
         <thead>
             <tr>
