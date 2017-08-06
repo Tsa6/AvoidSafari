@@ -26,7 +26,7 @@ class MainView(View):
                                 datetime.timezone.utc
                             ) - datetime.timedelta(days=1)
                         ).order_by('-length')[:5]
-                    )
+                    ) + [None] * 5
                 )
             }
         )
