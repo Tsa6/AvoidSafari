@@ -29,7 +29,6 @@ class CommentProcessor:
         if (
             comment.subreddit.display_name.lower() != 'avoid5'
             and len(remove_punctuation(remove_links(comment.body))) >= 5 * self.required_unique_words
-            and (self.allow_nsfw or not comment.submission.over_18)
             and not(any([fifth in remove_links(remove_usernames(comment.body)) for fifth in fifths]))
             and len(set(re.split('\s+',remove_links(comment.body)))) > self.required_unique_words
             and len(
@@ -55,6 +54,7 @@ class CommentProcessor:
                     )
                 )
             ) >= self.required_unique_words
+            and (self.allow_nsfw or not comment.submission.over_18)
         ):
             return comment
 
