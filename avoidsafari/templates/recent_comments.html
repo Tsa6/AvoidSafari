@@ -7,6 +7,9 @@
         text-align: center;
         font-family: sans-serif;
     }
+    table td {
+        vertical-align: top;
+    }
     iframe {
         display: inline-block !important;
     }
@@ -80,12 +83,15 @@
             </tr>
         </thead>
         <tbody>
-            {% for pair in comments %}
             <tr>
-                <td>{{pair.0|safe}}</td>
-                <td>{{pair.1|safe}}</td>
+                {% for list in comments %}
+                <td>
+                    {% for comment in list %}
+                        {{ comment | safe }}
+                    {% endfor %}
+                </td>
+                {% endfor %}
             </tr>
-            {% endfor %}
         </tbody>
     </table>
     <script async src="https://www.redditstatic.com/comment-embed.js"></script>

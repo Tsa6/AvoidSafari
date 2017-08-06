@@ -15,7 +15,7 @@ class MainView(View):
         return SimpleTemplateResponse(
             'recent_comments.html',
             context={
-                'comments':itertools.zip_longest(
+                'comments':[
                     map(
                         MainView.comment_to_embed_text,
                         Comment.objects.order_by('-timestamp')[:5]
@@ -27,9 +27,8 @@ class MainView(View):
                                 datetime.timezone.utc
                             ) - datetime.timedelta(days=1)
                         ).order_by('-length')[:5]
-                    ),
-                    fillvalue=''
-                )
+                    )
+                ]
             }
         )
     
