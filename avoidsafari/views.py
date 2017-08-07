@@ -1,4 +1,4 @@
-from django.template.response import SimpleTemplateResponse
+from django.template.response import TemplateResponse
 from django.views import View
 import requests
 import datetime
@@ -12,7 +12,8 @@ class MainView(View):
     embed_cache = {};
     
     def get(self, req):
-        return SimpleTemplateResponse(
+        return TemplateResponse(
+            req,
             'recent_comments.html',
             context={
                 'comments':[
